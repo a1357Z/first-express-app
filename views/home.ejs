@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title><%=title%></title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <script src="https://kit.fontawesome.com/3452448514.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Rendered from ejs views folder</h1>
+    <h1><i class="fas fa-address-book"></i>&nbsp;My Contacts List</h1>
+    <div class="container">
+        <table>
+            <% for(let i of contact_list){%>
+            
+                
+                    <tr>
+                        <td>
+                            <span><%=i.name%></span>
+                        </td>
+                        <td>
+                            <span><%=i.contact%></span>
+                        </td>
+                        <td>
+                            <form method="POST" action="/delete">
+                                <span><i class="fas fa-trash-alt"></i></span>
+                                <input type="checkbox" name="person" value="<%=i.name%>"  onchange="this.form.submit()">
+                            </form>
+                        </td>
+                    </tr>
+                    
+            
+            <%}%>
+        </table>   
+    </div>
+    <div class="container">
+        <form action="/" method="post" class="flex">
+            
+            <input type="text" id="name" name='name' placeholder="name required">
+    
+            
+            <input type="number" id="contact" name='contact' placeholder="contact" required>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    
+    <script src="../static/js/home.js">
+    
+    </script>
 </body>
 </html>

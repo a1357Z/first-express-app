@@ -1,0 +1,36 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  color: blueviolet;
+  margin: 40px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 700px;
+  background-color: cornsilk;
+  margin: 30px auto;
+}
+
+table {
+  margin: 10px auto;
+}
+td {
+  border: 20px solid transparent;
+  border-top: 10px;
+  border-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex:nth-child(n) {
+  flex-grow: 1;
+}
+tr:hover {
+  background-color: black;
+  color: cornsilk;
+}
