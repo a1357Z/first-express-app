@@ -25,7 +25,7 @@
                         <td>
                             <form method="POST" action="/delete">
                                 <span><i class="fas fa-trash-alt"></i></span>
-                                <input type="checkbox" name="person" value="<%=i.name%>"  onchange="this.form.submit()">
+                                <input type="checkbox" name="id" value="<%=i._id%>"  onchange="this.form.submit()">
                             </form>
                         </td>
                     </tr>
@@ -37,7 +37,7 @@
     <div class="container">
         <form action="/" method="post" class="flex">
             
-            <input type="text" id="name" name='name' placeholder="name required">
+            <input type="text" id="name" name='name' placeholder="name" required>
     
             
             <input type="number" id="contact" name='contact' placeholder="contact" required>
